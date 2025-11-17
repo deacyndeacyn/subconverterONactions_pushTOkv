@@ -8,7 +8,11 @@ on:
     
   workflow_dispatch:  # 支持手动触发
 
-  
+
+  repository_dispatch:
+    types: [trigger-from-MySubconverterRemoteConfig]
+
+
   # push:
   #   branches:
   #     - main  # 每次push到main分支时触发
