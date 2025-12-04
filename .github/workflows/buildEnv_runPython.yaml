@@ -1,22 +1,17 @@
 name: buildEnv_runPython
 
-
 on:
   schedule:
     - cron: '0 16 * * *'  # UTC 16:00 = 北京时间 0:00（次日）
 
-    
   workflow_dispatch:  # 支持手动触发
-
 
   repository_dispatch:
     types: [trigger-from-MySubconverterRemoteConfig]
 
-
-  # push:
-  #   branches:
-  #     - main  # 每次push到main分支时触发
-
+  push:
+    branches:
+      - main  # 每次push到main分支时触发
 
 jobs:
   buildEnv_runPython:
