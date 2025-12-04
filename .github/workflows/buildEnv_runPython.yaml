@@ -31,11 +31,12 @@ jobs:
       #     nohup subconverter/subconverter &
       
       # 使用docker的subconverter，会保持最新版本
+      # tindy2013/subconverter  asdlokj1qpi23/subconverter
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Run Docker container
         run: |
-          docker run -d --restart=always -p 25500:25500 tindy2013/subconverter:latest  # tindy2013/subconverter  asdlokj1qpi23/subconverter
+          docker run -d --restart=always -p 25500:25500 tindy2013/subconverter:latest
 
       - name: Set up Python
         uses: actions/setup-python@v5
